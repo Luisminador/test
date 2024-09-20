@@ -2,191 +2,436 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.header {
-    width: 100%;
-    background-color: white;
-    padding: 20px 30px;
-    display: flex;
-}
-.header .header-div1 {
-    width: 50%;
-    animation: header-div1 0.7s ease-in;
-}
-.header .header-div2 {
-    width: 50%;
-    padding-left: 180px;
-   
-}
-.header-div2 nav ul {
-    list-style-type: none;
-    padding: 0;
+body {
+    font-family: roboto, sans-serif;
+    color: #333;
     margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    padding-inline: 5vw;
+    padding-bottom: 50px;
+}
+
+/* ------------------------------- */
+/* THIS IS HEADER STYLE */
+.header {
     display: flex;
-}
-.header-div2 li {
-    display: block;
-    margin-left: 20px;
-}
-
-.hero-div {
-    padding: 100px;
-    text-align: center;
-    background-image: url(https://cdn.pixabay.com/photo/2022/12/31/17/35/hydraulic-design-7689068_1280.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.pixabay.com/photo/2022/12/31/17/35/hydraulic-design-7689068_1280.jpg);
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-.hero-div h1 {
-    color: white;
-    font-size: 42px;
-}
-.hero-div p {
-    text-align: center;
-    font-size: 16px;  
-    margin-top: 20px;  
-}
-.hero-div a {
-    margin: 10px 5px;
-}
-.hero-div button {
-    margin-top: 30px;
-    padding: 10px 20px;
-}
-
-.section-tjanster {
-    margin: 50px;
-}
-.section-tjanster h4 {
-    font-size: 19px;
-    padding: 20px 0px;
-}
-.tjanster-div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; 
-    padding: 20px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1100px;
-}
-.tjanster-div h2 {
-    grid-column: 1 / -1; 
-    margin-bottom: 20px;
-}
-.tjanster-item {
-    padding: 20px;
-    background-color: #f2f2f2; 
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
-.tjanster-item img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 15px;
-}
-
-.section-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 40px;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.section1-item {
+    justify-content: space-between;
     align-items: center;
-    align-content: center;
-}
-.section1-item p {
-    padding-right: 100px;
-    padding-top: 20px;
-}
-.section-1 img {
-    height: 350px;
-    border-radius: 15px;
+    width: 100%;
+    padding: 20px 15px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: fixed;
 }
 
-.kontaktform {
-    background-color: rgba(0, 0, 0, 0.49);
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 15px;
-    padding: 40px;
-    margin-top: 40px;
-    margin-bottom: 60px;
-}
-.kontaktform h2 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-.kontaktform label {
+.header-div1 p {
+    margin: 0;
+    font-size: 1.4rem;
     font-weight: bold;
 }
-.kontaktform input[type="text"], .kontaktform textarea, .kontaktform input[type="number"], .kontaktform input[type="email"] {
-    width: 100%;
-    padding: 7px;
-    margin-top: 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-.kontaktform button {
-    width: 100%;
-    background-color: rgb(0, 0, 136);
-    color: #F0F0F0;
-    margin-top: 20px;
-    padding: 12px;
-    font-size: 15px;
-    font-weight: 500px;
+
+.header-div1 {
+    width: 40%
 }
 
-.div-table {
-    background-color: blue;
+.header-div2 {
+    width: 60%;
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+.button-click {
+    background-color: #007BFF;
+    font-size: 14px;
+    padding: 12px 15px;
     color: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+/* Hidde nav for mobile */
+.header-div2 nav {
+    display: none;
+}
+
+/* Style for hamburgermenu */
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 2.5px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+/* Show navmenu when hamburgermenu is activated */
+.menu-active .header-div2 nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+.header-div2 nav a {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid white;
+}
+
+.header-div2 nav a:hover {
+    background-color: #007bff;
+}
+
+/* ------------------------- */
+/* THIS IS HERO STYLE */
+.hero {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 95vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.550),
+        rgba(0,0,0,0.550)
+    ) 
+    ,url("img/hero-taklaggare-taklaggning.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.hero h1 {
+    font-size: 2.4rem;
+}
+.hero p {
+    font-size: 1rem;
+    padding: 15px 0px;
+}
+.hero button {
+    padding: 15px 30px;
+    margin-top: 30px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* ------------------------------ */
+/* THIS IS THE SERVICES SECTION */
+.tjanster {
+    max-width: 1200px;
+    min-width: 320px;
+    padding-inline: 12vw;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tjanster button {
+    padding: 10px 25px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tjanster-div1, .tjanster-div2, .tjanster-div3 {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 7px;
+    padding: 40px 0px;
+    text-align: center;
+    background-size: cover;
+    align-content: center;
+    padding-inline: 8vw;
+}
+
+.tjanster-div1, .tjanster-div2, .tjanster-div3 h4 {
+    font-size: 20px;
+}
+
+.tjanster h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.tjanster p {
+    font-size: 1.1rem;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.tjanster-div1 {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.5)),
+    url("img/tjanster-taklaggare-startsida.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tjanster-div2 {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.5)),
+    url("img/hero-taklaggare-taklaggning.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tjanster-div3 {
+    background-image: linear-gradient(0deg,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.5)),
+    url("img/hero-taklaggare-taklaggning.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.tjanster a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tjanster a:visited {
+    color: inherit;
+}
+
+.tjanster-div h4 {
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.tjanster-div p {
+    font-size: 1rem;
+}
+
+/* ---------------------- */
+/* This is Om Fede Style */
+.om-oss {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.om-fede-div1 h2 {
+    font-size: 34px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.om-fede-div1 p {
+    font-size: 1.1rem;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.om-fede-img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    border-radius: 15px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.om-fede-div2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding: 20px;
 }
 
-.footer {
+/* -------------------- */
+/* Footer Style */
+.footer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #333;
+    padding-inline: 10vw;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.footer-logo h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.footer-logo h4 {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.footer-logo p {
+    color: white;
+    font-size: 15px;
+}
+
+.footer-links h4 {
+    color: white;
+    margin-top: 40px;
     width: 100%;
-    background-color: #F0F0F0;
-    padding: 10px 20px;
+    border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+
+.footer-links nav {
     display: flex;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-.footer-div2 {
-   position: absolute;
-   right: 0;
-   padding-right: 20px;
-   box-sizing: border-box;
+.footer-links a {
+    color: white;
+    text-decoration: none;
 }
 
-.test {
+.footer-featur {
+    margin-top: 90px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-items: ;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-featur-div1, .footer-featur-div2 {
+    color: white;
+    font-size: 14px;
 }
 
 
-@keyframes header-div1 {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
+/* Media queries for tablets (min-width: 667px) */
+@media (min-width: 667px) {
+
+    /* Header */
+    .header-div1 p {
+        font-size: 1.7rem;
     }
-    to {
-        transform: translateX(0);
-        opacity: 1;
+
+    .header-div2 .button-click {
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 14px 25px;
     }
+
+    .header-div2 .menu-toggle span {
+        width: 29px;
+        height: 3px;
+        margin: 5px 0;
+    }
+
+    /* Hero */
+    .hero {
+        padding-inline: 20vw;  
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero button {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        border-radius: 7px;
+    }
+
+    /* Services */
+    .tjanster {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline: 10vw;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .tjanster div {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(49% - 20px);
+        padding: 40px 25px;
+        text-align: center;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 20px;
+    }
+
+    /* Om oss */
+    .om-oss {
+        width: 100%;
+        padding-inline: 5vw;
+        flex-direction: row;
+        flex: 1 1 50%;
+    }
+
+    .om-fede-div1 {
+        width: 50%;
+    }
+
+    .om-fede-div2 {
+        width: 50%;
+        margin-right: auto;
+        padding: 0;
+        margin-left: 60px;
+    }
+
+    .om-fede-div1 h2 {
+        font-size: 38px;
+        text-align: left;
+    }
+
+    .om-fede-div1 p {
+    font-size: 1.1rem;
+    text-align: left;
+    }  
+
+    .om-fede-img {
+        max-width: 500px; 
+        height: auto; 
+        border-radius: 7px; 
+        display: block;
+    }
+}
+
+@media (min-width: px) {
+
 }

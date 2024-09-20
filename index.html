@@ -3,157 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>'Min första hemsida'</title>
-    <style>
-
-    </style>
     <link rel="stylesheet" href="mystyle.css">
+    <title>Fede Tak</title>
 </head>
 <body>
-    
+
     <!-- Det här är vår header -->
     <header class="header">
+        
         <div class="header-div1">
-            <h4>Loggo</h4>
+            <p>FEDE TAK</p>
         </div>
+
         <div class="header-div2">
             <nav>
                 <ul>
-                    <li><a href="index.html">Hem</a></li>
-                    <li><a href="tjanster.html" target="new">Tjänster</a></li>
-                    <li><a href="omoss.html" target="_blank">Om Oss</a>
+                    <li>
+                        <a href="tjanster.html">Tjänster</a>
                     </li>
-                    <li><a href="kontakt.html">Kontakt</a>
+                    <li>
+                        <a href="omoss.html">Om Oss</a> 
+                    </li>
+                    <li>
+                        <a href="kontakt.html">Kontakt</a>
                     </li>
                 </ul>
             </nav>
+            <a href="tel:0702655524" class="button-click">070-265 55 24</a>
+            
+            <!-- This is the hamurgermenu for mobile-->
+            <button class="menu-toggle" roboto-label="Öppna menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+
     </header>
 
-    <!-- Det här är vår Hero -->
-    <div class="hero-div">
-        <h1>VVS Gruppen</h1>
-        <p>Välkommen till VVS Gruppen, vi är experter med många års erfarenhet inom branschen</p>
-        <a href="/">
-            <button type="button">Tjänster</button>
-        </a>
-        <a href="/">
-            <button type="button">Om Oss</button>
-        </a>
-        <a href="/">
-            <button type="button">Kontakt</button>
-        </a>
-    </div>
+    <main>
+        
+        <!--This is Hero section-->
+        <section class="hero container container">
+            <div class="hero-div1">
+                <h1>Välkommen till Fede Tak!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit veniam fugiat ipsa dolores quam! Aliquid.</p>
+                <a href="">
+                    <button>Boka rådgivning</button>
+                </a>
+            </div>
+        </section>
+        
+        <!--This is Tjänster section-->
+        <section class="tjanster container">
+            <a href="omoss.html">
+            <div class="tjanster-div1">
+                <h3>Takläggning</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">
+                    <button>Läs mer</button>
+                </a>
+            </div>
+            </a>
+            <a href="omoss.html">
+            <div class="tjanster-div2">
+                <h3>Takrenovering</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">
+                    <button>Läs mer</button>
+                </a>
+            </div>
+            </a>
+            <a href="omoss.html">
+            <div class="tjanster-div3">
+                <h3>Taktvätt</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="">
+                    <button>Läs mer</button>
+                </a>
+            </div>
+            </a>
+        </section>
     
-    <section class="section-tjanster">
-        <div class="tjanster-div">
-            <h2>
-                Tjänster
-            </h2>
-            <div class="tjanster-item">
-                <h4>VVS-arbeten</h4>
-                <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="vvs-arbeten-bild">
+        <!--This is Om Fede Tak section-->
+        <section class="om-oss container">
+            <div class="om-fede-div1">
+                <h2>Om Fede Tak</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quod ducimus consequuntur ab veritatis rem iusto. Alias reiciendis impedit porro obcaecati. Dicta aliquid molestias labore aut nobis, rerum earum commodi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident accusamus aperiam fuga quo quibusdam laboriosam? Facere nisi inventore voluptas iusto eum, facilis eligendi! Nesciunt fuga et eum praesentium, tempore minima.</p>
             </div>
-            <div class="tjanster-item">
-                <h4>Avlopp</h4>
-                <img src="https://www.roranalys.se/uploads/dBa2ad2g/737x0_1140x0/avlopp_388_555_661.webp" alt="avlopp-bild">
+            <div class="om-fede-div2">
+                <img class="om-fede-img" src="img/tjanster-taklaggare-startsida.jpg" alt="tjanster-taklaggare-startsida">
             </div>
-            <div class="tjanster-item">
-                <h4>Rördragning</h4>
-                <img src="https://static.byggahus.se/attachments/images/large/505/505005-a79561cf7a83d53699fbc40a5633d132.jpg" alt="rordragning-bild">
+        </section>
+
+
+        <!--This is Footer-->
+        <footer class="footer-div">
+            <div class="footer-logo">
+                <h3>FEDE TAK</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem accusamus incidunt sapiente.</p>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="section-1">
-            <div class="section1-item">
-                <h2>Mer än 18 års erfarenhet</h2>
-                <p>Genom åren har vi utvecklat och moderniserat våra sätt att jobba på, detta möjliggör när det kommer till att få kunder ännu nöjdare med fina resultat. Vi är redo att applicera de 18 års erfarenhet vi har på alla uppdrag vi får. Välkommen till oss och se resultatet.</p>
+            <div class="footer-links">
+                <h4>
+                    Snabba länkar
+                </h4>
+                <nav>
+                    <a href="tjanster.html">Tjänster</a>
+                    <a href="omoss.html">Om Oss</a>
+                    <a href="kontakt.html">Kontakt</a>
+                </nav> 
+                <h4> Kontaktuppgifter </h4>
+                <nav>
+                    <a href="">info@fedetak.se</a>
+                    <a href="">070-265 55 24</a>
+                </nav>
             </div>
-            <div class="section1-item">
-                <img src="https://www.elinstallatoren.se/app/uploads/imported/vi-i-villa.jpg" alt="vvs-montorer">
+            <div class="footer-featur">
+                <div class="footer-featur-div1">
+                    <p>copyright@Fede Tak 2024</p>
+                </div>
+                <div class="footer-featur-div2">
+                    <p>Made with <u>Purebrand</u></p>
+                </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    
+    </main>
 
-    <section class="section-kontaktform">
-        <div class="kontaktform">
-            <h2>Kontakta Oss</h2>
-
-            <form action="#" method="post">
-                <label for="namn">Namn:</label><br/>
-                <input type="text" id="namn" name="namn" placeholder="Namn" required/><br/><br/>
-
-                <label for="telefon">Telefon:</label><br/>
-                <input type="number" id="telefon" name="telefon" placeholder="Telefon"/><br/><br/>
-
-                <label for="E-post">E-post:</label><br/>
-                <input type="email" id="epost" name="epost" placeholder="E-post" required><br/><br/>
-            
-                <label for="meddelande">Meddelande:</label><br/>
-                <textarea id="meddelande" name="meddelande" rows
-                ="5" cols="50" placeholder="Skriv ditt meddelande här"></textarea>
-
-                <button type="submit">Skicka</button>
-            </form>
-        </div>
-    </section>
-
-    <section>
-        <div class="div-table">
-            <table>
-                <tr>
-                    <th>Namn</th>
-                    <th>Storlek</th>
-                    <th>Färg</th>
-                </tr>
-                <tr>
-                    <td>Sebastian</td>
-                    <td>165</td>
-                    <td>Lila</td>
-                </tr>
-                <tr>
-                    <td>Hanna</td>
-                    <td>165</td>
-                    <td>Röd</td>
-                </tr>
-                <tr>
-                    <td>Alvar</td>
-                    <td>125</td>
-                    <td>Blå</td>
-                </tr>
-                <tr>
-                    <td>Astrid</td>
-                    <td>117</td>
-                    <td>Rosa</td>
-                </tr>
-            </table>
-        </div>
-    </section>
- <div class="test">
-    <div class="div1">
-        <h1>Hej</h1>
-    </div>
-    <div class="div2">
-        <h1>Hej</h1>
-    </div>
-    <div class="div3">
-        <h1>Hej</h1>
-    </div>
-</div>
-
-    <footer class="footer">
-        <div class="footer-div1">
-            <p>
-                Digitala kanaler
-            </p>
-        </div>
-        <div class="footer-div2">
-            <p>
-                Html @copyright 2024
-            </p>
-        </div>
-    </footer>
+    <script src="script.js">defer</script>
 </body>
 </html>
